@@ -16,7 +16,6 @@ Display quotes on Inky wHAT.
 """)
 
 # Command line arguments to set display type and colour, and enter your name
-
 parser = argparse.ArgumentParser()
 parser.add_argument('--colour', '-c', type=str, required=True, choices=["red", "black", "yellow"],
                     help="ePaper display colour")
