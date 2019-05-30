@@ -14,15 +14,7 @@ from font_source_sans_pro import SourceSansProSemibold
 print("""Inky wHAT: Quotes
 Display quotes on Inky wHAT.
 """)
-
-# Command line arguments to set display type and colour, and enter your name
-parser = argparse.ArgumentParser()
-parser.add_argument('--colour', '-c', type=str, required=True, choices=["red", "black", "yellow"],
-                    help="ePaper display colour")
-args = parser.parse_args()
-
-colour = args.colour
-
+colour = "red"
 
 # This function will take a quote as a string, a width to fit
 # it into, and a font (one that's been loaded) and then reflow
@@ -52,7 +44,7 @@ def reflow_quote(quote, width, font):
 
 # Set up the correct display and scaling factors
 inky_display = InkyWHAT(colour)
-inky_display.set_border(inky_display.WHITE)
+inky_display.set_border(inky_display.RED)
 # inky_display.set_rotation(180)
 
 w = inky_display.WIDTH
