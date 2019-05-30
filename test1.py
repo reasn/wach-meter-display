@@ -15,17 +15,6 @@ print("""Inky wHAT: Quotes
 Display quotes on Inky wHAT.
 """)
 
-try:
-    import wikiquotes
-except ImportError:
-    print("""This script requires the wikiquotes module.
-
-Install with:
-    sudo apt install python-lxml
-    sudo pip install wikiquotes
-""")
-    sys.exit(1)
-
 # Command line arguments to set display type and colour, and enter your name
 
 parser = argparse.ArgumentParser()
@@ -122,7 +111,7 @@ below_max_length = False
 
 while not below_max_length:
     person = random.choice(people)  # Pick a random person from our list
-    quote = wikiquotes.random_quote(person, "english")
+    quote = "Penis"
 
     reflowed = reflow_quote(quote, max_width, quote_font)
     p_w, p_h = quote_font.getsize(reflowed)  # Width and height of quote
