@@ -1,0 +1,5 @@
+Add to /boot/config.txg
+```
+dtparam=i2c1=on
+dtparam=spi=on
+```
